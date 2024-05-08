@@ -23,7 +23,7 @@ const Navigation = () => {
           backgroundColor: '#fff',
         },
         tabBarLabelStyle: {
-          backgroundColor: '#0e8',
+          backgroundColor: '#0e806a',
         }
       }}
       >
@@ -32,16 +32,16 @@ const Navigation = () => {
         component={Community}
         />
         <Tab.Screen
-        name = 'Call'
-        component={Call}
-        />
-        <Tab.Screen
         name = 'Chat'
         component={Chat}
         />
         <Tab.Screen
         name = 'Status'
         component={Status}
+        />
+        <Tab.Screen
+        name = 'Call'
+        component={Call}
         />
       </Tab.Navigator>
       //   <Stack.Navigator
@@ -70,12 +70,10 @@ const Navigation = () => {
   export default Navigation;
   
   const styles = StyleSheet.create({
-    headerContainer: {
-      flexDirection: 'row',
+    Container: {
+      flex: 1,
+      backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'space-between',
-      marginHorizontal: 8,
-      paddingTop: 8,
-      paddingBottom: 8,
+      justifyContent: 'center',
     },
   });

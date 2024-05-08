@@ -1,11 +1,21 @@
 import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-const community = () => {
+const Community = () => {
   return (
-    <div>
-      
-    </div>
+    <View style={styles.container}>
+      <Text>Community</Text>
+    </View>
   )
 }
 
-export default community
+export default Community
+
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

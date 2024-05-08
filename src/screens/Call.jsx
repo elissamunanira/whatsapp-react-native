@@ -1,11 +1,21 @@
 import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-const call = () => {
+const Call = () => {
   return (
-    <div>
-      
-    </div>
+    <View style={styles.container}>
+      <Text>Call</Text>
+    </View>
   )
 }
 
-export default call
+export default Call
+
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

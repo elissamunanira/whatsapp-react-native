@@ -13,7 +13,7 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar backgroundColor='#0e806a'/>
         <Header />
-        <View style={{ flex:1, backgroundColor:'#ffffff'}}>
+        <View style={{ flex:1, backgroundColor:'#fff'}}>
         <Navigation />
         </View>
       </View>

@@ -1,11 +1,21 @@
 import React from 'react'
+import { View, Text,StyleSheet } from 'react-native'
 
-const status = () => {
+const Status = () => {
   return (
-    <div>
-      
-    </div>
+    <View style={styles.Container}>
+      <Text>Status</Text>
+    </View>
   )
 }
 
-export default status
+export default Status
+
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

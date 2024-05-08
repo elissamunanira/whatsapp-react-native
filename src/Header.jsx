@@ -8,11 +8,11 @@ const Header = () => {
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
-            <Text style={styles.headerText}>Whatsapp</Text>
+            <Text style={styles.headerText}>WhatsApp</Text>
             <View style={styles.iconContainer}>
                 <Feather  name='camera' size={20} color ='#fff'style={styles.icon}/>
                 <Fontisto name = 'search'size={20} color ='#fff'style={styles.icon}/>
-                <MaterialCommunityIcons name ='dots-vertical'size ={21} style={styles.icon} />
+                <MaterialCommunityIcons name ='dots-vertical'size ={21} color='#fff'style={styles.icon} />
             </View>
         </View>
     </View>
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#0e806a',
-        paddingTop: 8,
-        paddingBottom: 80,
+        paddingTop: 80,
+        paddingBottom: 8,
       },
       headerContainer: {
         flexDirection: 'row',
