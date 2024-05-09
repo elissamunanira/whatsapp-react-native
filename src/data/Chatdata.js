@@ -3,7 +3,7 @@ const DATA = [
     "id": 1,
     "name": "Fin De Semana",
     'photos': require('../../assets/2.jpg'),
-    "lastMessage": "Yes Great!",
+    "lastMessage": "Yes Great! you did it, congratulations kbx",
     "time": "9:49",
     "totalUnread":4,
 },
