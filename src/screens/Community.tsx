@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 
 const Community = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.Container}>
       <Text>Community</Text>
     </View>
   )

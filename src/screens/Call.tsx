@@ -1,15 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Chat = () => {
+const Call = () => {
   return (
-    <View style = {styles.container}>
-      <Text>Chat</Text>
+    <View style={styles.Container}>
+      <Text>Calls</Text>
     </View>
   )
 }
 
-export default Chat
+export default Call
 
 const styles = StyleSheet.create({
   Container: {

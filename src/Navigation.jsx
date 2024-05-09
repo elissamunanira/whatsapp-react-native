@@ -22,7 +22,10 @@ const Navigation = () => {
         tabBarIndicatorStyle: {
           backgroundColor: '#fff',
         },
-        tabBarLabelStyle: {
+        tabBarLabelStyle:{
+          fontWeight: 'bold',
+        },
+        tabBarStyle: {
           backgroundColor: '#0e806a',
         }
       }}
@@ -30,6 +33,12 @@ const Navigation = () => {
         <Tab.Screen
         name = 'Community'
         component={Community}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='account-group'size={24} color = {color} />
+          ),
+          tabBarLabelStyle: styles.tabBarLabel
+        }}
         />
         <Tab.Screen
         name = 'Chat'
@@ -44,36 +53,13 @@ const Navigation = () => {
         component={Call}
         />
       </Tab.Navigator>
-      //   <Stack.Navigator
-      //     screenOptions={{
-      //       header: ({ scene, previous, navigation }) => (
-      //         <View style={[styles.headerContainer, { backgroundColor: '#0e806a' }]}>
-      //           <Header />
-      //         </View>
-      //       ),
-      //       headerTintColor: '#fff',
-      //       headerTitleStyle: {
-      //         fontWeight: 'bold',
-      //         fontSize: 20,
-      //       },
-      //       headerTitleAlign: 'center',
-      //     }}>
-      //     <Stack.Screen name="Chat" component={Chat} />
-      //     <Stack.Screen name="Call" component={Call} />
-      //     <Stack.Screen name="Community" component={Community} />
-      //     <Stack.Screen name="Status" component={Status} />
-      //   </Stack.Navigator>
-      // </NavigationContainer>
     );
   };
   
   export default Navigation;
   
   const styles = StyleSheet.create({
-    Container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
+   tabBarLabel:{
+    display: 'none',
+   }
   });

@@ -6,7 +6,7 @@ import { Feather, Fontisto, MaterialCommunityIcons } from 'react-native-vector-i
 
 const Header = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.Container}>
         <View style={styles.headerContainer}>
             <Text style={styles.headerText}>WhatsApp</Text>
             <View style={styles.iconContainer}>
@@ -22,21 +22,21 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    Container: {
         backgroundColor: '#0e806a',
-        paddingTop: 80,
+        paddingTop: 60,
         paddingBottom: 8,
+        width: '100%',
       },
       headerContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginHorizontal: 8, 
+        marginHorizontal: 16, 
       },
       headerText: {
         fontSize: 20,
-        fontWeight: 'bold', 
+        fontWeight: '500', 
         color: '#fff',
       },
       iconContainer: {
