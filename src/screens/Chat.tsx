@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import DATA from '../data/chatdata';
+import { Feather} from 'react-native-vector-icons';
 // import { MaterialCommunityIcons } from 'react-native-vector-icons';
 
 const Chat = () => {
@@ -37,11 +38,8 @@ const Chat = () => {
         </View>
        )}
       />
-      
-      <View>
-        <Text style={styles.chatIcon}>
-            
-        </Text>
+      <View style={styles.chatIcon}>
+          <Feather  name='message-square' size={32} color ='#fff'style={styles.icon}/>
       </View>
     </View>
   )
@@ -102,7 +100,7 @@ const styles = StyleSheet.create({
   unreadContainer: {
     height:20,
     width:25,
-    borderRadius:20,
+    borderRadius:50,
     backgroundColor :'#25D366',
     alignItems: 'center',
     justifyContent: 'center',
@@ -113,11 +111,18 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   chatIcon: {
-    backgroundColor: 'green',
+    backgroundColor: '#25D366',
+    position: 'relative',
     height:60,
     width:60,
     borderRadius: 50,
-    marginBottom: 10,
-    marginRight: 10,
+    marginBottom: 40,
+    marginLeft: 320,
+  },
+  icon:{
+    alignItems: 'center',
+    position: 'relative',
+    marginLeft: 15,
+    marginTop: 15,
   }
 });
