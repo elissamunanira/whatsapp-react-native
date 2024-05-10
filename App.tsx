@@ -10,7 +10,7 @@ import Navigation from './src/Navigation';
 export default function App() {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
+      <View style={styles.Container}>
         <StatusBar backgroundColor='#0e806a'/>
         <Header />
         <View style={{ flex:1, backgroundColor:'#fff'}}>
@@ -22,10 +22,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  Container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'space-between',
   },
 });

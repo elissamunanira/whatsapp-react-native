@@ -37,6 +37,12 @@ const Chat = () => {
         </View>
        )}
       />
+      
+      <View>
+        <Text style={styles.chatIcon}>
+            
+        </Text>
+      </View>
     </View>
   )
 }
@@ -105,5 +111,13 @@ const styles = StyleSheet.create({
     fontSize:16,
     color: '#fff',
     fontWeight: '600'
+  },
+  chatIcon: {
+    backgroundColor: 'green',
+    height:60,
+    width:60,
+    borderRadius: 50,
+    marginBottom: 10,
+    marginRight: 10,
   }
 });

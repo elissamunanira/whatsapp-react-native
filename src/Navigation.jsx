@@ -61,5 +61,6 @@ const Navigation = () => {
   const styles = StyleSheet.create({
    tabBarLabel:{
     display: 'none',
+    // backgroundColor:'red'
    }
   });
