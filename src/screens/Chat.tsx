@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import DATA from '../data/chatdata';
-import { Feather} from 'react-native-vector-icons';
+import { Feather } from 'react-native-vector-icons';
 // import { MaterialCommunityIcons } from 'react-native-vector-icons';
 
 const Chat = () => {
@@ -38,9 +38,9 @@ const Chat = () => {
         </View>
        )}
       />
-      <View style={styles.chatIcon}>
+      <TouchableOpacity style={styles.chatIcon}>
           <Feather  name='message-square' size={32} color ='#fff'style={styles.icon}/>
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }

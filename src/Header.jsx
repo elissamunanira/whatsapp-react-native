@@ -3,13 +3,25 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 
 import { Feather, Fontisto, MaterialCommunityIcons } from 'react-native-vector-icons';
 
+import DATA from '../src/data/chatdata';
+
 
 const Header = () => {
   const [searchMode,setSearchMode] = useState('false');
-  const [searchQuery,setSearchQuery] = useState('');
+  const [searchQuery,setSearchQuery] = useState(' ');
+  const [searchResults, setSearchResults] = useState([]);
+
+  //function to filter chat data based on query
+  const searchChatData = () => {
+    const results = DATA.filter(chat => chat.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    searchResults(results);
+  }
   const handleSearchIconClick = () => {
     setSearchMode(!searchMode);
-  }
+    if (!searchMode) {
+      setSearchResults([]);
+    }
+  };
   return (
     <View style={styles.Container}>
         <View style={styles.headerContainer}>
@@ -23,8 +35,22 @@ const Header = () => {
             </View>
         </View>
         {searchMode && (
+          <View>
+          {/* <Text> */}
           <TextInput
-          style = {styles.searchInput} placeholder = "search..." value = {searchQuery} onchangeText = {text =>setSearchQuery(text)} autoFocus = {true} />
+          style = {styles.searchInput} placeholder = "search..." value = {searchQuery} onchangeText = {text =>setSearchQuery(text)} autoFocus = {true} 
+          onSubmitEditing={searchChatData}
+          />
+
+          {/* Rendering search results */}
+          {searchResults.map(chat => (
+            <View key = {chat.id}>
+              <Text style = {styles.chatName}>chat.name</Text>
+              <Text style={styles.lastMessage}>{chat.lastMessage}</Text>
+            </View>
+          ))}
+          {/* </Text> */}
+          </View>
         )}
     </View>
   )
@@ -35,7 +61,7 @@ export default Header
 const styles = StyleSheet.create({
     Container: {
         backgroundColor: '#0e806a',
-        paddingTop: 60,
+        paddingTop: 40,
         paddingBottom: 8,
         width: '100%',
       },
@@ -64,5 +90,14 @@ const styles = StyleSheet.create({
         paddingVertical: 16,
         paddingHorizontal: 16,
         borderRadius: 8,
-      }
+      },
+      chatName: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 10,
+      },
+      lastMessage: {
+        fontSize: 16,
+        marginTop: 5,
+      },
     });
